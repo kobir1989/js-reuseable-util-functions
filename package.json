@@ -2,10 +2,10 @@
   "name": "validator-library",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
-  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc",
     "prettier": "prettier --write .",
@@ -16,6 +16,7 @@
   "author": "Kabir",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.4",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
@@ -24,6 +25,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.0",
     "prettier": "^3.0.3",
+    "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
   },
   "husky": {
