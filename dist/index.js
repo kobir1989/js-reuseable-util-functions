@@ -4,4 +4,5 @@ import { isValidURL } from './validartors/isValidURL';
 import { isValidPhoneNumber } from './validartors/isValidPhoneNumber';
 import { isValidDate } from './validartors/isValidDate';
 import { isStrongPassword } from './validartors/isStrongPassword';
-export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword };
+import { isValidUserName } from './validartors/isValidUserName';
+export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName };
