@@ -1,9 +1,11 @@
 {
-  "name": "validator-library",
+  "name": "util-functions",
   "version": "1.0.0",
-  "description": "",
+  "description": "util functions and validators",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://github.com/kobir1989/validator-library",
+  "repository": "https://github.com/kobir1989/validator-library",
   "scripts": {
     "test": "jest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -13,8 +15,21 @@
     "fix-all": "npm run lint -- --fix && git add -A . && npm run prettier",
     "pre-push": "npm run build && [ $? -eq 0 ] || exit 1"
   },
-  "author": "Kabir",
-  "license": "ISC",
+  "author": "Kabir Hossain",
+  "keywords": [
+    "validator",
+    "validation",
+    "validate",
+    "sanitization",
+    "sanitize",
+    "sanitisation",
+    "sanitise",
+    "assert",
+    "util",
+    "utility",
+    "util functions"
+  ],
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.4",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
@@ -27,6 +42,9 @@
     "prettier": "^3.0.3",
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">= 0.10"
   },
   "husky": {
     "hooks": {

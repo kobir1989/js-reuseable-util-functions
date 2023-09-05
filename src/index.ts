@@ -1,3 +1,4 @@
-import { isValidEmail } from './isValidEmail'
+import { isValidEmail } from './validartors/isValidEmail'
+import { isPasswordMatched } from './validartors/isPasswordMatched'
 
-export { isValidEmail }
+export { isValidEmail, isPasswordMatched }
