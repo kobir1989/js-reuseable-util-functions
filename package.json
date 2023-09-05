@@ -1,6 +1,6 @@
 {
   "name": "js-reuseable-util-functions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "util functions and validators",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
