@@ -2,8 +2,13 @@
  * @function isPasswordMatched
  * @param {password}
  * @param {confirmPassword}
- * @param {length}
- * @return {string}
+ * @param {minLength}
+ * @return {object}
  *
  */
-export declare const isPasswordMatched: (password: string, confirmPassword: string, length: number) => boolean;
+interface Error {
+    isTooShort: boolean;
+    isMatched: boolean;
+}
+export declare const isPasswordMatched: (password: string, confirmPassword: string, minLength: number) => Error;
+export {};

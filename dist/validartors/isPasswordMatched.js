@@ -2,18 +2,23 @@
  * @function isPasswordMatched
  * @param {password}
  * @param {confirmPassword}
- * @param {length}
- * @return {string}
+ * @param {minLength}
+ * @return {object}
  *
  */
-export const isPasswordMatched = (password, confirmPassword, length) => {
-    if (!password && !confirmPassword)
-        return false;
-    if (password?.length < length)
-        return false;
-    if (confirmPassword?.length < length)
-        return false;
-    if (password !== confirmPassword)
-        return false;
-    return true;
+export const isPasswordMatched = (password, confirmPassword, minLength) => {
+    const error = {
+        isTooShort: false,
+        isMatched: false
+    };
+    if (!password || !confirmPassword) {
+        error.isTooShort = true;
+    }
+    if (password.length < minLength || confirmPassword.length < minLength) {
+        error.isTooShort = true;
+    }
+    if (password !== confirmPassword) {
+        error.isMatched = true;
+    }
+    return error;
 };
