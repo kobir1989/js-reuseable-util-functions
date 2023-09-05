@@ -1,5 +1,5 @@
 /***
- * @function isValidEmail takes an email address as input and uses the test() method of the regex pattern to check if the email matches the given pattern.
+ * @function isValidEmail
  * @param {email}
  * @return {boolean}
  */
