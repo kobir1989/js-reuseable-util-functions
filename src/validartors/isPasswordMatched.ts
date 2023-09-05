@@ -2,23 +2,37 @@
  * @function isPasswordMatched
  * @param {password}
  * @param {confirmPassword}
- * @param {length}
- * @return {string}
+ * @param {minLength}
+ * @return {object}
  *
  */
+
+interface Error {
+  isTooShort: boolean
+  isMatched: boolean
+}
 
 export const isPasswordMatched = (
   password: string,
   confirmPassword: string,
-  length: number
-): boolean => {
-  if (!password && !confirmPassword) return false
+  minLength: number
+): Error => {
+  const error: Error = {
+    isTooShort: false,
+    isMatched: false
+  }
 
-  if (password?.length < length) return false
+  if (!password || !confirmPassword) {
+    error.isTooShort = true
+  }
 
-  if (confirmPassword?.length < length) return false
+  if (password.length < minLength || confirmPassword.length < minLength) {
+    error.isTooShort = true
+  }
 
-  if (password !== confirmPassword) return false
+  if (password !== confirmPassword) {
+    error.isMatched = true
+  }
 
-  return true
+  return error
 }
