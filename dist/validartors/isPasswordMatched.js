@@ -1,24 +1,11 @@
-/***
- * @function isPasswordMatched
- * @param {password}
- * @param {confirmPassword}
- * @param {minLength}
- * @return {object}
- *
- */
+import { checkArgs } from '../lib/checkArgs';
 export const isPasswordMatched = (password, confirmPassword, minLength) => {
+    // throw Error if password and confirmPassword type is not string.
+    checkArgs(password, 'string', 'Password should be strings!');
+    checkArgs(confirmPassword, 'string', 'Confirm Password Password should be strings!');
     const error = {
-        isTooShort: false,
-        isMatched: false
+        isTooShort: password.length < minLength || confirmPassword.length < minLength,
+        isMatched: password !== confirmPassword
     };
-    if (!password || !confirmPassword) {
-        error.isTooShort = true;
-    }
-    if (password.length < minLength || confirmPassword.length < minLength) {
-        error.isTooShort = true;
-    }
-    if (password !== confirmPassword) {
-        error.isMatched = true;
-    }
     return error;
 };

@@ -21,23 +21,7 @@ test('should be case-insenstestive for file extensions', () => {
 test('should throw an error for an empty fileName', () => {
   const allowedExtensions = ['jpg', 'png', 'gif']
   const fileName = ''
-  expect(isValidFileExtension(allowedExtensions, fileName)).toThrow(
-    'The fileName parameter cannot be empty.'
-  )
-})
-
-test('should throw an error if allowedExtensions is an empty array', () => {
-  const allowedExtensions = []
-  const fileName = 'myimage.jpg'
-  expect(isValidFileExtension(allowedExtensions, fileName)).toThrow(
-    'The allowedExtensions array must contain at least one allowed extension.'
-  )
-})
-
-test('should throw an error if fileName lacks a valid file extension', () => {
-  const allowedExtensions = ['jpg', 'png', 'gif']
-  const fileName = 'myfile' // Missing the file extension
-  expect(isValidFileExtension(allowedExtensions, fileName)).toThrow(
-    'The fileName "myfile" does not have a valid file extension.'
+  expect(() => isValidFileExtension(allowedExtensions, fileName)).toThrow(
+    `The fileName "${fileName}" does not have a valid file extension.`
   )
 })

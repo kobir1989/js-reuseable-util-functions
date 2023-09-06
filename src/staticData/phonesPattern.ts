@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-escape */
-type PhonePatterns = {
+interface PhonePatterns {
   [key: string]: RegExp
 }
 export const phonesPattern: PhonePatterns = {

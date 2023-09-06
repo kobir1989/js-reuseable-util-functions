@@ -5,6 +5,7 @@ import { isValidPhoneNumber } from './validartors/isValidPhoneNumber'
 import { isValidDate } from './validartors/isValidDate'
 import { isStrongPassword } from './validartors/isStrongPassword'
 import { isValidUserName } from './validartors/isValidUserName'
+import { isValidFileExtension } from './validartors/isValidFileExtention'
 
 export {
   isValidEmail,
@@ -13,5 +14,6 @@ export {
   isValidPhoneNumber,
   isValidDate,
   isStrongPassword,
-  isValidUserName
+  isValidUserName,
+  isValidFileExtension
 }

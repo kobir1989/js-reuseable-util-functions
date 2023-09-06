@@ -7,6 +7,8 @@
  * @return {object}
  */
 
+import { checkArgs } from '../lib/checkArgs'
+
 interface Error {
   hasChar: boolean
   hasSymble: boolean
@@ -25,19 +27,12 @@ export const isStrongPassword = (
     hasNumber: true,
     hasUppercase: true
   }
+  // throw error if password is not string
+  checkArgs(password, 'string', 'Password Must be string!')
 
-  if (!password || password === '') {
-    return {
-      hasChar: false,
-      hasSymble: false,
-      hasNumber: false,
-      hasUppercase: false
-    }
-  }
-
-  const charRegex = /[A-Za-z]/g
-  const symbolRegex = /[$&+,:;=?@#|'<>.^*()%!-]/g
-  const numberRegex = /[0-9]/g
+  const charRegex = /[A-Za-z]/g // characters regex
+  const symbolRegex = /[$&+,:;=?@#|'<>.^*()%!-]/g // symble regex
+  const numberRegex = /[0-9]/g // number regex
 
   const charCount = (password.match(charRegex) || []).length
   const symbolCount = (password.match(symbolRegex) || []).length

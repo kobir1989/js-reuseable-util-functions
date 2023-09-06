@@ -6,6 +6,7 @@
  * @param {number} minNumbers - Minimum number of numbers (default is 2).
  * @return {object}
  */
+import { checkArgs } from '../lib/checkArgs';
 export const isStrongPassword = (password, minChars = 2, minSymbols = 2, minNumbers = 2) => {
     const error = {
         hasChar: true,
@@ -13,17 +14,11 @@ export const isStrongPassword = (password, minChars = 2, minSymbols = 2, minNumb
         hasNumber: true,
         hasUppercase: true
     };
-    if (!password || password === '') {
-        return {
-            hasChar: false,
-            hasSymble: false,
-            hasNumber: false,
-            hasUppercase: false
-        };
-    }
-    const charRegex = /[A-Za-z]/g;
-    const symbolRegex = /[$&+,:;=?@#|'<>.^*()%!-]/g;
-    const numberRegex = /[0-9]/g;
+    // throw error if password is not string
+    checkArgs(password, 'string', 'Password Must be string!');
+    const charRegex = /[A-Za-z]/g; // characters regex
+    const symbolRegex = /[$&+,:;=?@#|'<>.^*()%!-]/g; // symble regex
+    const numberRegex = /[0-9]/g; // number regex
     const charCount = (password.match(charRegex) || []).length;
     const symbolCount = (password.match(symbolRegex) || []).length;
     const numberCount = (password.match(numberRegex) || []).length;

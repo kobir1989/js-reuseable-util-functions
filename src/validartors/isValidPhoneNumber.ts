@@ -1,3 +1,4 @@
+import { checkArgs } from '../lib/checkArgs'
 import { phonesPattern } from '../staticData/phonesPattern'
 
 /**
@@ -6,9 +7,10 @@ import { phonesPattern } from '../staticData/phonesPattern'
  * @returns {boolean}
  */
 export const isValidPhoneNumber = (
-  phoneNumber: number | string,
+  phoneNumber: string,
   locale: string
 ): boolean => {
+  checkArgs(phoneNumber, 'string', 'Phone Number Must be string!')
   // Convert the phoneNumber to a string for validation
   phoneNumber = phoneNumber.toString().trim()
 

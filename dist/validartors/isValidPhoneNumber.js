@@ -1,3 +1,4 @@
+import { checkArgs } from '../lib/checkArgs';
 import { phonesPattern } from '../staticData/phonesPattern';
 /**
  * @function isValidPhoneNumber
@@ -5,6 +6,7 @@ import { phonesPattern } from '../staticData/phonesPattern';
  * @returns {boolean}
  */
 export const isValidPhoneNumber = (phoneNumber, locale) => {
+    checkArgs(phoneNumber, 'string', 'Phone Number Must be string!');
     // Convert the phoneNumber to a string for validation
     phoneNumber = phoneNumber.toString().trim();
     // Check if the provided locale exists in the phonesPattern

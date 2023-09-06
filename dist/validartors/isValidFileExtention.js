@@ -5,16 +5,11 @@
  * @return {boolean}
  * @throws {Error} - If invalid arguments are provided.
  */
+import { checkArgs } from '../lib/checkArgs';
+import { checkArgsArray } from '../lib/checkArgsArray';
 export const isValidFileExtension = (allowedExtensions, fileName) => {
-    if (!Array.isArray(allowedExtensions)) {
-        throw new Error('The allowedExtensions parameter must be an array.');
-    }
-    if (typeof fileName !== 'string') {
-        throw new Error('The fileName parameter must be a string.');
-    }
-    if (!fileName) {
-        throw new Error('The fileName parameter cannot be empty.');
-    }
+    checkArgs(fileName, 'string', 'The fileName parameter must be a string.');
+    checkArgsArray(allowedExtensions, 'The allowedExtensions parameter must be an array.');
     if (!allowedExtensions.length) {
         throw new Error('The allowedExtensions array must contain at least one allowed extension.');
     }

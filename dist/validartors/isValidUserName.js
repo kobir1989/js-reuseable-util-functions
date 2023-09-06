@@ -4,7 +4,11 @@
  * @param {Array}  disallowedWords  - offensive words
  * @return {boolean}
  */
+import { checkArgs } from '../lib/checkArgs';
+import { checkArgsArray } from '../lib/checkArgsArray';
 export const isValidUserName = (userName, disallowedWords = ['admin', 'root', 'password']) => {
+    checkArgs(userName, 'string', 'User Name must be string!');
+    checkArgsArray(disallowedWords, 'Disallowed Words must be an Array of String!');
     const usernameRegex = /^[a-zA-Z0-9_]{3,20}$/; // Allows letters, numbers, and underscores, 3-20 characters long
     // Test if the username matches the defined regex pattern.
     const isValid = usernameRegex.test(userName);

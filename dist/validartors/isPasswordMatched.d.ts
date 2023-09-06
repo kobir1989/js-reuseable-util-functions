@@ -1,10 +1,9 @@
-/***
+/**
  * @function isPasswordMatched
- * @param {password}
- * @param {confirmPassword}
- * @param {minLength}
- * @return {object}
- *
+ * @param {string} password - The password to compare.
+ * @param {string} confirmPassword - The confirmation of the password.
+ * @param {number} minLength - The minimum length for the password.
+ * @return {Error} - An object indicating the errors.
  */
 interface Error {
     isTooShort: boolean;

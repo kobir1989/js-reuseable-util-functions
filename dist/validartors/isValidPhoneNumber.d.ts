@@ -3,4 +3,4 @@
  * @param {phoneNumber} string | number
  * @returns {boolean}
  */
-export declare const isValidPhoneNumber: (phoneNumber: number | string, locale: string) => boolean;
+export declare const isValidPhoneNumber: (phoneNumber: string, locale: string) => boolean;

@@ -5,4 +5,5 @@ import { isValidPhoneNumber } from './validartors/isValidPhoneNumber';
 import { isValidDate } from './validartors/isValidDate';
 import { isStrongPassword } from './validartors/isStrongPassword';
 import { isValidUserName } from './validartors/isValidUserName';
-export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName };
+import { isValidFileExtension } from './validartors/isValidFileExtention';
+export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName, isValidFileExtension };
