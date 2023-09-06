@@ -7,6 +7,7 @@ import { isStrongPassword } from '@src/validartors/isStrongPassword'
 import { isValidUserName } from '@src/validartors/isValidUserName'
 import { isValidFileExtension } from './validartors/isValidFileExtention'
 import { truncatedString } from '@src/util-functions/string-manipulation/truncateString'
+import { sluggifiedString } from '@src/util-functions/string-manipulation/sluggifiedString'
 
 export {
   isValidEmail,
@@ -17,5 +18,6 @@ export {
   isStrongPassword,
   isValidUserName,
   isValidFileExtension,
-  truncatedString
+  truncatedString,
+  sluggifiedString
 }

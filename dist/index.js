@@ -7,4 +7,5 @@ import { isStrongPassword } from '@src/validartors/isStrongPassword';
 import { isValidUserName } from '@src/validartors/isValidUserName';
 import { isValidFileExtension } from './validartors/isValidFileExtention';
 import { truncatedString } from '@src/util-functions/string-manipulation/truncateString';
-export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName, isValidFileExtension, truncatedString };
+import { sluggifiedString } from '@src/util-functions/string-manipulation/sluggifiedString';
+export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName, isValidFileExtension, truncatedString, sluggifiedString };
