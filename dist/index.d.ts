@@ -9,4 +9,5 @@ import { isValidFileExtension } from './validartors/isValidFileExtention';
 import { truncatedString } from '@src/util-functions/string-manipulation/truncateString';
 import { sluggifiedString } from '@src/util-functions/string-manipulation/sluggifiedString';
 import { dateFormatter } from '@src/util-functions/string-manipulation/dateFormatter';
-export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName, isValidFileExtension, truncatedString, sluggifiedString, dateFormatter };
+import { shuffleArray } from '@src/util-functions/array-manipulation/shuffleArray';
+export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName, isValidFileExtension, truncatedString, sluggifiedString, dateFormatter, shuffleArray };

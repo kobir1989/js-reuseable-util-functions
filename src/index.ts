@@ -9,6 +9,8 @@ import { isValidFileExtension } from './validartors/isValidFileExtention'
 import { truncatedString } from '@src/util-functions/string-manipulation/truncateString'
 import { sluggifiedString } from '@src/util-functions/string-manipulation/sluggifiedString'
 import { dateFormatter } from '@src/util-functions/string-manipulation/dateFormatter'
+import { shuffleArray } from '@src/util-functions/array-manipulation/shuffleArray'
+import { chunkArray } from '@src/util-functions/array-manipulation/chunkArray'
 
 export {
   isValidEmail,
@@ -21,5 +23,7 @@ export {
   isValidFileExtension,
   truncatedString,
   sluggifiedString,
-  dateFormatter
+  dateFormatter,
+  shuffleArray,
+  chunkArray
 }
