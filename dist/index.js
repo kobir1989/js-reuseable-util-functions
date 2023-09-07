@@ -10,4 +10,5 @@ import { truncatedString } from '@src/util-functions/string-manipulation/truncat
 import { sluggifiedString } from '@src/util-functions/string-manipulation/sluggifiedString';
 import { dateFormatter } from '@src/util-functions/string-manipulation/dateFormatter';
 import { shuffleArray } from '@src/util-functions/array-manipulation/shuffleArray';
-export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName, isValidFileExtension, truncatedString, sluggifiedString, dateFormatter, shuffleArray };
+import { chunkArray } from '@src/util-functions/array-manipulation/chunkArray';
+export { isValidEmail, isPasswordMatched, isValidURL, isValidPhoneNumber, isValidDate, isStrongPassword, isValidUserName, isValidFileExtension, truncatedString, sluggifiedString, dateFormatter, shuffleArray, chunkArray };
