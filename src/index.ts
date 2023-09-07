@@ -8,6 +8,7 @@ import { isValidUserName } from '@src/validartors/isValidUserName'
 import { isValidFileExtension } from './validartors/isValidFileExtention'
 import { truncatedString } from '@src/util-functions/string-manipulation/truncateString'
 import { sluggifiedString } from '@src/util-functions/string-manipulation/sluggifiedString'
+import { dateFormatter } from '@src/util-functions/string-manipulation/dateFormatter'
 
 export {
   isValidEmail,
@@ -19,5 +20,6 @@ export {
   isValidUserName,
   isValidFileExtension,
   truncatedString,
-  sluggifiedString
+  sluggifiedString,
+  dateFormatter
 }
