@@ -59,7 +59,7 @@ if (error.isTooShort) {
   console.error('Password is too short.') // Handle the error accordingly.
 }
 
-if (error.isMatched) {
+if (!error.isMatched) { // isMatched will be false if booth password are not equal.
   console.error('Passwords do not match.') // Handle the error accordingly.
 }
 
