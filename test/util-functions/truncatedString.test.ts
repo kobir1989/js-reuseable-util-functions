@@ -33,9 +33,19 @@ describe('truncatedString', () => {
   // Test case - 4
   it('should handle leading and trailing whitespace', () => {
     const inputString = '   Trim me   '
-    const expectedOutput = 'Trim me...'
+    const expectedOutput = 'Trim me'
 
     const result = truncatedString(inputString)
+
+    expect(result).toBe(expectedOutput)
+  })
+  // Test case - 5
+  it('should handle leading and trailing whitespace', () => {
+    const inputString = 'This String Should not truncated and should not add...'
+    const expectedOutput =
+      'This String Should not truncated and should not add...'
+
+    const result = truncatedString(inputString, 54, 70)
 
     expect(result).toBe(expectedOutput)
   })

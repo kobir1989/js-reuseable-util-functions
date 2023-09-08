@@ -14,8 +14,8 @@ export const isValidUserName = (userName, disallowedWords = ['admin', 'root', 'p
     const isValid = usernameRegex.test(userName);
     if (isValid) {
         // Check for disallowed words (e.g., reserved words, offensive content).
-        const lowerCaseUserName = userName;
-        if (disallowedWords.includes(lowerCaseUserName.toLowerCase())) {
+        const lowerCaseUserName = userName.toLowerCase();
+        if (disallowedWords.includes(lowerCaseUserName)) {
             return false;
         }
     }

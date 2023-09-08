@@ -5,7 +5,7 @@ export const isPasswordMatched = (password, confirmPassword, minLength) => {
     checkArgs(confirmPassword, 'string', 'Confirm Password Password should be strings!');
     const error = {
         isTooShort: password.length < minLength || confirmPassword.length < minLength,
-        isMatched: password !== confirmPassword
+        isMatched: password === confirmPassword
     };
     return error;
 };
