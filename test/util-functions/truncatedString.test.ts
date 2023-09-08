@@ -1,6 +1,7 @@
 import { truncatedString } from '../../src/util-functions/string-manipulation/truncateString'
 
 describe('truncatedString', () => {
+  // Test case - 1
   it('should truncate a string with default values', () => {
     const inputString = 'This is a long sentence that needs to be truncated.'
     const expectedOutput = 'This is a long sentence that n...'
@@ -9,7 +10,7 @@ describe('truncatedString', () => {
 
     expect(result).toBe(expectedOutput)
   })
-
+  // Test case - 2
   it('should truncate a string with custom start and end indices', () => {
     const inputString = 'Customizing truncation'
     const start = 0
@@ -20,7 +21,7 @@ describe('truncatedString', () => {
 
     expect(result).toBe(expectedOutput)
   })
-
+  // Test case - 3
   it('should handle empty strings', () => {
     const inputString = ''
     const expectedOutput = ''
@@ -29,7 +30,7 @@ describe('truncatedString', () => {
 
     expect(result).toBe(expectedOutput)
   })
-
+  // Test case - 4
   it('should handle leading and trailing whitespace', () => {
     const inputString = '   Trim me   '
     const expectedOutput = 'Trim me...'

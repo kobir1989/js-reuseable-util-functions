@@ -1,13 +1,14 @@
 import { sluggifiedString } from '../../src/util-functions/string-manipulation/sluggifiedString'
 
 describe('sluggifiedString function', () => {
+  // Test case - 1
   it('should convert a basic string to lowercase and replace spaces with hyphens', () => {
     const input = 'This is a test string'
     const expected = 'this-is-a-test-string'
     const result = sluggifiedString(input)
     expect(result).toBe(expected)
   })
-
+  // Test case - 2
   it('should handle different separators', () => {
     const input = 'Custom separator example'
     const expectedHyphen = 'custom-separator-example'
@@ -19,7 +20,7 @@ describe('sluggifiedString function', () => {
     expect(resultHyphen).toBe(expectedHyphen)
     expect(resultUnderscore).toBe(expectedUnderscore)
   })
-
+  // Test case - 3
   it('should handle case options', () => {
     const input = 'Test Case Example'
     const expectedLower = 'test-case-example'
@@ -34,7 +35,7 @@ describe('sluggifiedString function', () => {
     expect(resultUpper).toBe(expectedUpper)
     expect(resultTitle).toBe(expectedTitle)
   })
-
+  // Test case - 4
   it('should remove stop words if specified', () => {
     const input = 'This is a sample title'
     const expectedWithoutStopWords = 'sample-title'
@@ -51,7 +52,7 @@ describe('sluggifiedString function', () => {
     expect(resultWithStopWords).toBe(expectedWithoutStopWords)
     expect(resultWithoutStopWords).toBe(expectedWithStopWords)
   })
-
+  // Test case - 5
   it('should truncate the slug to the specified max length', () => {
     const input = 'This is a very long title that needs to be shortened'
     const expectedShortened = 'this-is-a-very-long-title-that'
@@ -62,7 +63,7 @@ describe('sluggifiedString function', () => {
 
     expect(resultShortened).toBe(expectedShortened)
   })
-
+  // Test case - 6
   it('should throw an error for an empty input string', () => {
     const emptyInput = ''
     expect(() => sluggifiedString(emptyInput)).toThrow(
