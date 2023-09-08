@@ -1,6 +1,6 @@
 {
-  "name": "js-validations-and-utils",
-  "version": "1.1.0",
+  "name": "js-validators-and-utils",
+  "version": "1.2.0",
   "description": "A versatile toolkit of utility functions and validators for simplifying data validation and common tasks in JavaScript applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,6 +24,7 @@
     "assert",
     "util",
     "utility",
+    "helper functions",
     "util functions",
     "data validation",
     "input validation",
