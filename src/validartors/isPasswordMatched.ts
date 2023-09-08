@@ -29,7 +29,7 @@ export const isPasswordMatched = (
   const error: Error = {
     isTooShort:
       password.length < minLength || confirmPassword.length < minLength,
-    isMatched: password !== confirmPassword
+    isMatched: password === confirmPassword
   }
 
   return error
