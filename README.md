@@ -5,8 +5,8 @@
 ![Build Status](https://img.shields.io/travis/ritu1989/js-validators-and-utils)
 ![Downloads](https://img.shields.io/npm/dt/js-validators-and-utils)
 ![GitHub stars](https://img.shields.io/github/stars/kobir1989/js-validators-and-utils)
-![GitHub forks](https://img.shields.io/github/forks/username/js-validators-and-utils)
-![GitHub issues](https://img.shields.io/github/issues/username/js-validators-and-utils)
+![GitHub forks](https://img.shields.io/github/forks/kobir1989/js-validators-and-utils)
+![GitHub issues](https://img.shields.io/github/issues/kobir1989/js-validators-and-utils)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/kobir1989/js-validators-and-utils)
 ![Maintenance](https://img.shields.io/maintenance/yes/2023)
 
