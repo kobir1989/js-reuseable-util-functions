@@ -1,6 +1,6 @@
 # js-validators-and-utils
 
-![npm version](https://img.shields.io/badge/npm-v1.2.0-blue)
+![npm version](https://img.shields.io/badge/npm-v1.4.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Build Status](https://img.shields.io/travis/ritu1989/js-validators-and-utils)
 ![Downloads](https://img.shields.io/npm/dt/js-validators-and-utils)
@@ -59,7 +59,8 @@ if (error.isTooShort) {
   console.error('Password is too short.') // Handle the error accordingly.
 }
 
-if (!error.isMatched) { // isMatched will be false if booth password are not equal.
+if (!error.isMatched) {
+  // isMatched will be false if booth password are not equal.
   console.error('Passwords do not match.') // Handle the error accordingly.
 }
 
@@ -442,30 +443,40 @@ console.log('Original String:', inputString)
 console.log('Truncated String:', truncated) // Expected Output: Lorem ipsum dolor sit amet...
 ```
 
-### 6. delay() - function is used to delay the execution of the Operation
+### 6. debounce() - function is used to delay the execution of the Operation
 
 ```javascript
 // Import the necessary function from the library.
-import { delay } from 'js-validators-and-utils'
+import { debounce } from 'js-validators-and-utils'
 
 /**
- * @function delay
- * @param {number} time - Delay time in ms.
- * @param {function} operation - Function to be delayed.
+ * @function debounce
+ * @param {function} func - The function to be debounced.
+ * @param {number} delay - Delay time in milliseconds.
+ * @returns {function} - A debounced function.
  */
 
-// Example use case:
-const delayTime = 2000 // Delay for 2 seconds (2000 milliseconds).
-
-const delayedOperation = () => {
-  console.log('Delayed operation executed after 2 seconds.')
+// Simulated API request function
+const fetchSearchResults = query => {
+  // Simulate an API request and log the results
+  console.log(`Fetching results for query: ${query}`)
 }
 
-// Call the function to delay the operation.
-console.log('Delaying operation for 2 seconds...')
-delay(delayTime, delayedOperation)
-// Delaying operation for 2 seconds...
-// Delayed operation executed after 2 seconds.
+// Get the search input element from the DOM
+const searchInput = document.getElementById('search-input')
+
+// Function to handle user input and trigger API request
+const handleSearchInput = event => {
+  const query = event.target.value
+
+  // Use debounce to delay the API request by 500 milliseconds
+  debounce(() => {
+    fetchSearchResults(query)
+  }, 500)()
+}
+
+// Attach the event listener to the search input
+searchInput.addEventListener('input', handleSearchInput)
 ```
 
 ### 7. retry() - function is used to retry the asyncOperation function <br> up to maxRetries times with a delay of delayMs milliseconds between each retry.
