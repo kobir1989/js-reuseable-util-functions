@@ -14,7 +14,7 @@ import { chunkArray } from '../src/util-functions/array-manipulation/chunkArray'
 import { fetchWrapper } from '../src/util-functions/HTTP-request/fetchWrapper'
 import { capitalizeString } from '../src/util-functions/string-manipulation/capitalizeString'
 import { flattenArray } from '../src/util-functions/array-manipulation/flattenArray'
-import { delay } from '../src/util-functions/async-operation/delay'
+import { debounce } from '../src/util-functions/async-operation/debounce'
 import { retry } from '../src/util-functions/async-operation/retry'
 
 export {
@@ -35,5 +35,5 @@ export {
   flattenArray,
   fetchWrapper,
   retry,
-  delay
+  debounce
 }

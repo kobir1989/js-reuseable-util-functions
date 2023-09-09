@@ -1,6 +1,6 @@
 {
   "name": "js-validators-and-utils",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "A versatile toolkit of utility functions and validators for simplifying data validation and common tasks in JavaScript applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,6 +16,9 @@
     "pre-push": "npm run build && [ $? -eq 0 ] || exit 1"
   },
   "author": "Kabir Hossain",
+  "contributors": [
+    "Kabir Hossain (https://github.com/kobir1989)"
+  ],
   "keywords": [
     "validator",
     "validation",
