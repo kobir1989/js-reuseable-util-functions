@@ -9,6 +9,8 @@
 ![GitHub issues](https://img.shields.io/github/issues/kobir1989/js-validators-and-utils)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/kobir1989/js-validators-and-utils)
 ![Maintenance](https://img.shields.io/maintenance/yes/2023)
+[![GitHub Dependents](https://img.shields.io/github/dependents/kobir1989/js-validators-and-utils.svg)](https://github.com/kobir1989/js-validators-and-utils/network/dependents)
+
 
 ## JavaScript Validator and utils Functions - light weight library
 
